@@ -3,7 +3,7 @@
 
 # Name der Software: CashFlowCraft
 
-# Beteiligte Personen:
+ Beteiligte Personen:
 
 Malte Martens   MN: 10238360
 
