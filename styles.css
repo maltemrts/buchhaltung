@@ -4,7 +4,11 @@
     grid-template-columns: 1fr[content-start] 1fr 70% [content-stop]  1fr [content-end2]; /* Vier Spalten mit gleicher Breite */
     gap: 10px; /* Abstand zwischen den Zellen */
 }
-
+.content-grid2{
+    display: grid;
+    grid-template-columns: 1fr[content-start] 1fr 70% [content-stop]  1fr [content-end2]; /* Vier Spalten mit gleicher Breite */
+    gap: 10px; /* Abstand zwischen den Zellen */
+}
 /* Stile für die Zellen */
 .cell {
     grid-column: auto; /* Lass die Zellen die automatische Zuweisung verwenden */
@@ -121,17 +125,18 @@ table{
     border-collapse: collapse;
     background-color: #e4742ada;
     box-shadow: 3px 3px 3px black;
+    grid-column: content-start / content-stop;;
 }
 .table-box{
     align-items: center;
 }
 td, th{
     border: 2px solid black;
-    padding: 25px 55px;
+    padding: 50px 100px;
 }
 thead{
     box-shadow: 0 3px 6px #964a18da;
-    background-color: #964a18da;
+    background-color: #381d0cda;
 }
 
 /* Weitere Stile können hier hinzugefügt werden */
