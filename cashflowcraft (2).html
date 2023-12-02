@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CashFlowCraft</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Verlinke deine CSS-Datei hier -->
+    <script src="scripts.js"></script> <!-- Verlinke deine JavaScript-Datei hier -->
+</head>
+<body>
+
+    <header>
+        <h1>CashFlowCraft</h1>
+    </header>
+    <!-- <nav> </nav> -->
+    <main>
+        <h2>Herzlich Wilkommen auf CashFlowCraft</h2>
+            <div class="button-container">
+                <button onclick="openPopup('login')">Einloggen</button><br>
+                <button onclick="openPopup('register')">Registrieren</button>
+        </div>
+        <div class="article-container content-grid">
+            <article>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.<br>
+    
+                Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.<br>
+    
+                Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.<br>
+    
+                Nam liber tempor cum soluta nobis eleifend ion congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+            </article>
+    </main>
+    <div class="popup-windows-container">
+        <span onclick="closePopup()" style="cursor: pointer; float: right;">X</span>
+        <div id="loginForm" style="display: none;">
+            <!-- Login-Formular hier -->
+            <h2>Einloggen</h2>
+            <form method="post" action="">
+                Benutzername/E-mail: <br><input type="text" name="username_or_email" required><br>
+                Passwort: <br><input type="password" name="password" required><br>
+                <input type="submit" name="login" value="Login"> <div class="button-right"><button type="button" onclick="redirectToRegistration()">zur Registrierung</button></div>
+            </form>
+        </div>
+        <div id="registerForm" style="display: none;">
+            <!-- Registrierungsformular hier -->
+            <h2>Registrierung</h2>
+            <form method="post" action="">
+                Benutzername: <br><input type="text" name="username" required><br>
+                E-Mail: <br><input type="text" name="email" required><br>
+                Vorname: <br><input type="text" name="firstname" required><br>
+                Nachname: <br><input type="text" name="lastname" required><br>
+                Passwort: <br><input type="password" name="password" required><br>
+                <input type="submit" name="register" value="Registrieren">  
+                <div class="button-right">
+                    <button type="button" onclick="redirectToLogin()">zum Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>Impressum</p>
+        <p1>Kontakt: <a href="mailto:hege@example.com">cashflowcraft@example.com</a></p1>
+    </footer>
+
+</body>
+</html>

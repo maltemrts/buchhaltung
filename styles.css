@@ -1,0 +1,131 @@
+/* CSS in styles.css */
+.content-grid{
+    display: grid;
+    grid-template-columns: 1fr[content-start] 1fr 70% [content-stop]  1fr [content-end2]; /* Vier Spalten mit gleicher Breite */
+    gap: 10px; /* Abstand zwischen den Zellen */
+}
+
+/* Stile für die Zellen */
+.cell {
+    grid-column: auto; /* Lass die Zellen die automatische Zuweisung verwenden */
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+}
+h2{
+    display: grid;
+    grid-template-columns: 1fr[content-start] 1fr 70% [content-stop]  1fr [content-end2];
+    padding-bottom: auto;
+    position: relative;
+    align-content: center;
+}
+
+body {
+    font-size: 25px;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+header, nav, main, footer {
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 0;
+}
+h2 {
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: content-start / content-stop;
+    margin: auto;
+}
+
+/* Ein einfaches 2x2 Grid */
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* Eine Zeile für Header, eine für Main, eine für Footer */
+    grid-template-columns: 1fr; /* Eine Spalte für den gesamten Inhalt */
+    min-height: 100vh; /* Mindesthöhe des Viewports, um den Footer am unteren Rand zu halten */
+    align-items: center;
+}
+
+/* Stile für Header, Navigation, Main und Footer können hier hinzugefügt werden */
+header {
+    background-color: #e4742ada;
+    color: rgb(255, 255, 255);
+    padding: 0%;   
+}
+
+nav {
+    background-color: #ac3434;
+    margin-top: 0;
+}
+
+main {
+    background-color: #ffffff;
+    margin-top: 0;
+}
+
+footer {
+    background-color: #e4742ada;
+    color: white;
+}
+.article-container article {
+    text-align: justify;
+    font-size: 23px;
+    grid-column: content-start / content-stop;
+}
+.button-container {
+    font-size: 20px;
+    position: absolute;
+    right: 20px;
+    top: 45px;
+}
+.button-right {
+    font-size: 20px;
+}
+.popup-windows-container {
+    font-size: 15px;
+    font-style: none;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background: #e4742ada;
+    border: 1px solid #ccc;
+    line-height: 1;
+    z-index: 1000;
+}
+#loginForm, #registerForm {
+    display: flex;
+    flex-direction: column; /* Die Input-Elemente werden untereinander angeordnet */
+    align-items: right; /* Zentriert die Elemente horizontal */
+}
+
+#loginForm input,
+#registerForm input {
+    margin: 2px 0; /* Abtsand der Boxen zueinander */
+    padding: 2px; /* größe der Inputbox*/
+}
+table{
+    font-size: 46px;
+    border: 2px solid black;
+    border-collapse: collapse;
+    background-color: #e4742ada;
+    box-shadow: 3px 3px 3px black;
+}
+.table-box{
+    align-items: center;
+}
+td, th{
+    border: 2px solid black;
+    padding: 25px 55px;
+}
+thead{
+    box-shadow: 0 3px 6px #964a18da;
+    background-color: #964a18da;
+}
+
+/* Weitere Stile können hier hinzugefügt werden */
