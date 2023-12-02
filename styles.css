@@ -81,6 +81,12 @@ footer {
     right: 20px;
     top: 45px;
 }
+
+.button-container button{
+    width: 100px;
+    border-radius: 10px;
+}
+
 .button-right {
     font-size: 20px;
 }
