@@ -14,7 +14,7 @@
             $port = "5432";
             $dbname = "postgres";
             $user = "postgres";
-            $password = "postgre";
+            $password = "your_password";
     
             // Connect to PostgreSQL
             $conn = pg_connect("host=$host port=$port dbname=$dbname user=$user password=$password");
@@ -24,29 +24,21 @@
 
     <header>
         <h1>CashFlowCraft</h1>
+        <div class="logo"><img height="100px" width="100px" src="/buchhaltung/favicon.v4.png" alt="Ihr Logo"></div>
     </header>
-    <!-- <nav> </nav> -->
     <main>
-        <h2>Herzlich Wilkommen auf CashFlowCraft</h2>
-            <div class="button-container">
-                <button onclick="openPopup('login')">Einloggen</button><br>
-                <button onclick="openPopup('register')">Registrieren</button>
-        </div>
-        <div class="article-container content-grid">
-            <article>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.<br>
-    
-                Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.<br>
-    
-                Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.<br>
-    
-                Nam liber tempor cum soluta nobis eleifend ion congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-            </article>
+    <section class="button-container"> 
+            <h2>Willkommen bei CashFlowCraft: Deiner Plattform für einfache und effiziente Buchführung!</h2>
+           
+            <div class="loginbutton"> <button onclick="openPopup('login')">Einloggen</button></div>
+            <div class="registerbutton"><button onclick="openPopup('register')">Registrieren</button></div>
+        
+        </section> 
     </main>
     <div class="popup-windows-container">
         <span onclick="closePopup()" style="cursor: pointer; float: right;">X</span>
         <div id="loginForm" style="display: none;">
-            <h2>Einloggen</h2>
+            <h3>Einloggen</h3>
             <form method="post" action="">
                 Benutzername/E-Mail: <br><input type="text" name="username_or_email" required><br>
                 Passwort: <br><input type="password" name="password" required><br>
@@ -84,7 +76,7 @@
                     $_SESSION['username'] = $row['User_Username'];
     
                     // Redirect to the after-login page
-                    header("Location: http://localhost/buchhaltung/ledger_test.php");
+                    header("Location: http://localhost/buchhaltung/MainPage.php");
                     exit(); // Ensure that no further code is executed after the redirect
                 } else {
                     // Authentication failed
@@ -94,7 +86,7 @@
             ?>
         </div>
         <div id="registerForm" style="display: none;">
-            <h2 style="font-size: 25px;">Registrierung</h2>
+            <h3 style="font-size: 25px;">Registrierung</h3>
             <form method="post" action="">
                 Benutzername: <br><input type="text" name="username" required><br>
                 E-Mail: <br><input type="text" name="email" required><br>
@@ -151,7 +143,7 @@
 
     <footer>
         <p>Impressum</p>
-        <p1>Kontakt: <a href="mailto:hege@example.com">cashflowcraft@example.com</a></p1>
+        <p1>Kontakt: <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUXbmV2ZXIgZ29ubmEgZ2l2ZSB5b3UgdXA%3D">cashflowcraft@example.com</a></p1>
     </footer>
 
 </body>
