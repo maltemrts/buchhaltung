@@ -7,7 +7,16 @@ function openPopup(formType) {
     } else if (formType === 'register') {
         document.getElementById('loginForm').style.display = 'none';
         document.getElementById('registerForm').style.display = 'block';
-    }
+    } else if (formType === 'addentry')
+        document.getElementById('newEntryModal').style.display = 'block';
+}
+
+function openModal() {
+    document.getElementById('newEntryModal').style.display = 'block';
+}
+
+function closeModal() {
+    document.getElementById('newEntryModal').style.display = 'none';
 }
 
 function closePopup() {
