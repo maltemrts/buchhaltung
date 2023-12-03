@@ -8,6 +8,7 @@
     <script src="scripts.js"></script> <!-- Verlinke deine JavaScript-Datei hier -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<<<<<<< HEAD
     <?php
         // Database connection parameters
         $host = "localhost";
@@ -38,6 +39,8 @@
             die("Query failed: " . pg_last_error());
         }
     ?>
+=======
+>>>>>>> b186136d3e714b89519666ee9281cd62103fb748
 </head>
 <body>
     
@@ -50,6 +53,7 @@
 
 <main>
 
+<<<<<<< HEAD
 <ul class="bookingList">
 
     <!-- Display user greeting -->
@@ -147,6 +151,52 @@
 </main>
 
 <footer>
+=======
+    <ul class="bookingList">
+
+        <li><h3 class="greet">Wilkommen, Malte</h3></li>
+
+        <li class="bookingEntry bookingButton">
+        <button class="incomeButton">Neue Einnahme</button>
+        <button class="expenseButton">Neue Ausgabe</button>
+        </li>
+
+        <li class="bookingEntry">
+            <h1 class="balance">Balance: 1234€</h1>
+        </li>
+
+        <li class="bookingEntry typeDec">
+            <div class="EntryNode bookingPrice">Betrag:</div>
+            <div class="EntryNode bookingType">Art:</div>
+            <div class="EntryNode date">Datum:</div>    
+        </li>
+
+        <li class="bookingEntry">
+        <div class="EntryNode bookingPrice">-1234€</div>
+            <div class="EntryNode bookingType">Miete</div>
+            <div class="EntryNode date">12.11.23</div>    
+        </li>
+
+        <li class="bookingEntry">
+        <div class="EntryNode bookingPrice">-1234€</div>
+            <div class="EntryNode bookingType">Miete</div>
+            <div class="EntryNode date">12.11.23</div>    
+        </li>
+        <li class="bookingEntry">
+        <div class="EntryNode bookingPrice">-1234€</div>
+            <div class="EntryNode bookingType">Miete</div>
+            <div class="EntryNode date">12.11.23</div>    
+        </li>
+        <li class="bookingEntry">
+        <div class="EntryNode bookingPrice">-1234€</div>
+            <div class="EntryNode bookingType">Miete</div>
+            <div class="EntryNode date">12.11.23</div>    
+        </li>
+        
+    </ul>
+</main>
+    <footer>
+>>>>>>> b186136d3e714b89519666ee9281cd62103fb748
         <p>Impressum</p>
         <p1>Kontakt: <a href="mailto:hege@example.com">cashflowcraft@example.com</a></p1>
     </footer>

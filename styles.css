@@ -1,98 +1,91 @@
 /* CSS in styles.css */
+@import url(req.css);
+
 .content-grid{
     display: grid;
     grid-template-columns: 1fr[content-start] 1fr 70% [content-stop]  1fr [content-end2]; /* Vier Spalten mit gleicher Breite */
     gap: 10px; /* Abstand zwischen den Zellen */
 }
-.content-grid2{
-    display: grid;
-    grid-template-columns: 1fr[content-start] 1fr 70% [content-stop]  1fr [content-end2]; /* Vier Spalten mit gleicher Breite */
-    gap: 10px; /* Abstand zwischen den Zellen */
-}
-/* Stile für die Zellen */
-.cell {
-    grid-column: auto; /* Lass die Zellen die automatische Zuweisung verwenden */
-    border: 1px solid #ccc;
-    padding: 20px;
+section{
     text-align: center;
+    padding: 20px;
+    margin-bottom: auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    min-height: 20px;
 }
-h2{
+header {
     display: grid;
-    grid-template-columns: 1fr[content-start] 1fr 70% [content-stop]  1fr [content-end2];
-    padding-bottom: auto;
-    position: relative;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    background-color: rgb(24, 162, 236);
+    color: rgb(255, 255, 255);
+    height: 11vh;
+}
+.logo{
     align-content: center;
+    padding: 15px;
 }
 
-body {
+ body {
     font-size: 25px;
+    display: grid;
+    grid-template-rows: auto;
     font-family: Arial, sans-serif;
     margin: 0;
-}
-
-header, nav, main, footer {
-    padding: 20px;
-    text-align: center;
-    margin-bottom: 0;
-}
-h2 {
-    font-size: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-column: content-start / content-stop;
-    margin: auto;
-}
-
-/* Ein einfaches 2x2 Grid */
-body {
+    display: flex;     
+    flex-wrap: nowrap;     
+    flex-direction: column;     
+    justify-content: space-between;
     display: grid;
     grid-template-rows: auto 1fr auto; /* Eine Zeile für Header, eine für Main, eine für Footer */
     grid-template-columns: 1fr; /* Eine Spalte für den gesamten Inhalt */
     min-height: 100vh; /* Mindesthöhe des Viewports, um den Footer am unteren Rand zu halten */
     align-items: center;
+} 
+
+main, footer {
+    background-color: var(--mainColour);
+    text-align: center;
+}
+h2 {
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    grid-column: content-start / content-stop;
+    margin: auto;
+    min-height: 20px;
 }
 
+/* Ein einfaches 2x2 Grid */
 /* Stile für Header, Navigation, Main und Footer können hier hinzugefügt werden */
-header {
-    background-color: #e4742ada;
-    color: rgb(255, 255, 255);
-    padding: 0%;   
-}
-
-nav {
-    background-color: #ac3434;
-    margin-top: 0;
-}
-
 main {
     background-color: #ffffff;
-    margin-top: 0;
-}
-
-footer {
-    background-color: #e4742ada;
-    color: white;
-}
-.article-container article {
-    text-align: justify;
-    font-size: 23px;
-    grid-column: content-start / content-stop;
+    margin-bottom: auto;
 }
 .button-container {
-    font-size: 20px;
-    position: absolute;
-    right: 20px;
-    top: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+    text-align: center; 
 }
-
-.button-container button{
-    width: 100px;
+.button-container button {
+    width: 150px;
+    height: 40px;
     border-radius: 20px;
+    font-size: 16px;
+    margin: 5px;
+    transition: all 0.3s ease;
 }
-
-.button-right {
-    font-size: 20px;
+.button-container button:hover {
+    width: 180px;
+    height: 50px;
+    font-size: 18px;
 }
 .popup-windows-container {
     font-size: 15px;
@@ -103,7 +96,7 @@ footer {
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 20px;
-    background: #e4742ada;
+    background: rgb(24, 162, 236);
     border: 1px solid #ccc;
     line-height: 1;
     z-index: 1000;
@@ -119,24 +112,3 @@ footer {
     margin: 2px 0; /* Abtsand der Boxen zueinander */
     padding: 2px; /* größe der Inputbox*/
 }
-table{
-    font-size: 46px;
-    border: 2px solid black;
-    border-collapse: collapse;
-    background-color: #e4742ada;
-    box-shadow: 3px 3px 3px black;
-    grid-column: content-start / content-stop;;
-}
-.table-box{
-    align-items: center;
-}
-td, th{
-    border: 2px solid black;
-    padding: 50px 100px;
-}
-thead{
-    box-shadow: 0 3px 6px #964a18da;
-    background-color: #381d0cda;
-}
-
-/* Weitere Stile können hier hinzugefügt werden */

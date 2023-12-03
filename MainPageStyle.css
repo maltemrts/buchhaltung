@@ -140,6 +140,7 @@ footer {
     background-color: rgba(24, 162, 236, 0.907);
     color: white;
 }
+<<<<<<< HEAD
 .modal {
     display: none;
     position: fixed;
@@ -166,3 +167,6 @@ footer {
     font-size: 28px;
     font-weight: bold;
 }
+=======
+
+>>>>>>> b186136d3e714b89519666ee9281cd62103fb748
