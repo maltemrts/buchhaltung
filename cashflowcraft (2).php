@@ -6,11 +6,8 @@
     <title>CashFlowCraft</title>
     <link rel="stylesheet" href="styles.css"> <!-- Verlinke deine CSS-Datei hier -->
     <script src="scripts.js"></script> <!-- Verlinke deine JavaScript-Datei hier -->
-<<<<<<<< HEAD:cashflowcraft (2).php
-========
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
->>>>>>>> e851a27674cd7998f85417e82d78f4bb67737879:Start.phtml
 </head>
 <body>
 
@@ -35,7 +32,6 @@
                 Nam liber tempor cum soluta nobis eleifend ion congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
             </article>
     </main>
-<<<<<<<< HEAD:cashflowcraft (2).php
     
     <div class="popup-windows-container">
         <span onclick="closePopup()" style="cursor: pointer; float: right;">X</span>
@@ -90,35 +86,10 @@
         <div id="registerForm" style="display: none;">
             <!-- Registrierungsformular hier -->
             <h2>Registrierung</h2>
-========
-    <div class="popup-windows-container">
-        <span onclick="closePopup()" style="cursor: pointer; float: right;">X</span>
-        <div id="loginForm" style="display: none;">
-            <!-- Login-Formular hier -->
-            <h2 style="font-size: 25px;">Einloggen</h2>
-            <form method="post" action="">
-                Benutzername/E-mail: <br><input type="text" name="username_or_email" required><br>
-                Passwort: <br><input type="password" name="password" required><br>
-                <input type="submit" name="login" value="Login"> <div class="button-right"><button type="button" onclick="redirectToRegistration()">zur Registrierung</button></div>
-            </form>
-        </div>
-        <div id="registerForm" style="display: none;">
-            <!-- Registrierungsformular hier -->
-            <h2 style="font-size: 25px;">Registrierung</h2>
->>>>>>>> e851a27674cd7998f85417e82d78f4bb67737879:Start.phtml
-            <form method="post" action="">
-                Benutzername: <br><input type="text" name="username" required><br>
-                E-Mail: <br><input type="text" name="email" required><br>
-                Vorname: <br><input type="text" name="firstname" required><br>
-                Nachname: <br><input type="text" name="lastname" required><br>
-                Passwort: <br><input type="password" name="password" required><br>
-                <input type="submit" name="register" value="Registrieren">  
-                <div class="button-right">
-                    <button type="button" onclick="redirectToLogin()">zum Login</button>
-                </div>
-            </form>
         </div>
     </div>
+
+
 
     <footer>
         <p>Impressum</p>
