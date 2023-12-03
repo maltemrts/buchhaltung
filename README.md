@@ -8,3 +8,5 @@
 Malte Martens   MN: 10238360
 
 Oliver Hartmann MN: 10236906
+
+Konrad Hertzsch MN: 10236071
