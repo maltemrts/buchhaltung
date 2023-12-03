@@ -1,0 +1,35 @@
+.bookingButton{
+    width: 20vw;
+    height: 5vh;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bookingButton button{
+    width: 150px;
+    height: 30px;
+    border-radius: 20px;
+    color: white;
+    
+    border: none;
+}
+
+.incomeButton{
+    background-color: green;
+    transition: 0.5s;
+}
+
+.incomeButton:hover{
+    transform: scale(1.14);
+}
+
+.expenseButton{
+    background-color: red;
+    transition: 0.5s;
+}
+
+.expenseButton:hover{
+    transform: scale(1.14);
+}
