@@ -78,10 +78,17 @@
                 
                 if ($row = pg_fetch_assoc($result)) {
                     // Authentication successful
-                    echo "<p style='color: green;'>Login successful. Welcome, {$row['User_Username']}!</p>";
+                    // Store user information in session for future use
+                    session_start();
+                    $_SESSION['user_id'] = $row['User_Id'];
+                    $_SESSION['username'] = $row['User_Username'];
+    
+                    // Redirect to the after-login page
+                    header("Location: http://localhost/buchhaltung/ledger_test.php");
+                    exit(); // Ensure that no further code is executed after the redirect
                 } else {
                     // Authentication failed
-                    echo "<p style='color: red;'>Login failed. Please check your credentials.</p>";
+                    echo "<p style='color: red;'>Login gescheitert. Benutername oder Passwort falsch.</p>";
                 }
             }
             ?>
