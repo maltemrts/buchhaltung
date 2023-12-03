@@ -8,6 +8,17 @@
     <script src="scripts.js"></script> <!-- Verlinke deine JavaScript-Datei hier -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <?php
+            // Database connection parameters
+            $host = "localhost";
+            $port = "5432";
+            $dbname = "your_database_name";
+            $user = "your_username";
+            $password = "your_password";
+    
+            // Connect to PostgreSQL
+            $conn = pg_connect("host=$host port=$port dbname=$dbname user=$user password=$password");
+    ?>
 </head>
 <body>
 
@@ -43,16 +54,6 @@
                 <div class="button-right"><button type="button" onclick="redirectToRegistration()">zur Registrierung</button></div>
             </form>
             <?php
-            // Database connection parameters
-            $host = "localhost";
-            $port = "5432";
-            $dbname = "your_database_name";
-            $user = "your_username";
-            $password = "your_password";
-    
-            // Connect to PostgreSQL
-            $conn = pg_connect("host=$host port=$port dbname=$dbname user=$user password=$password");
-    
             if (!$conn) {
                 die("Connection failed: " . pg_last_error());
             }
@@ -77,7 +78,7 @@
                 
                 if ($row = pg_fetch_assoc($result)) {
                     // Authentication successful
-                    echo "<p style='color: green;'>Login successful. Welcome, {$row['username']}!</p>";
+                    echo "<p style='color: green;'>Login successful. Welcome, {$row['User_Username']}!</p>";
                 } else {
                     // Authentication failed
                     echo "<p style='color: red;'>Login failed. Please check your credentials.</p>";
@@ -98,6 +99,46 @@
                     <button type="button" onclick="redirectToLogin()">zum Login</button>
                 </div>
             </form>
+            <?php
+                if (!$conn) {
+                    die("Connection failed: " . pg_last_error());
+                }
+
+                if (isset($_POST['register'])) {
+                    $email = $_POST['email'];
+                    $username = $_POST['username'];
+                    $firstname = $_POST['firstname'];
+                    $lastname = $_POST['lastname'];
+                    $password = $_POST['password'];
+
+                    // Check if username or email is already taken
+                    $checkQuery = "SELECT * FROM \"dt_UserData\" WHERE \"User_Username\" = $1 OR \"User_Email\" = $2";
+                    $checkResult = pg_query_params($conn, $checkQuery, array($username, $email));
+
+                    if (!$checkResult) {
+                        die("Error in SQL query: " . pg_last_error());
+                    }
+
+                    if (pg_num_rows($checkResult) > 0) {
+                        // Username or email is already taken
+                        echo "Benutzername oder E-Mail ist schon vergeben, bitte wähle eine andere.";
+                    } else {
+                        // Perform registration logic
+                        $insertQuery = "INSERT INTO \"dt_UserData\" (\"User_Email\", \"User_Username\", \"User_Firstname\", \"User_Lastname\", \"User_Password\", \"User_RegistrationDate\") VALUES ($1, $2, $3, $4, $5, CURRENT_TIMESTAMP)";
+                        $insertResult = pg_query_params($conn, $insertQuery, array($email, $username, $firstname, $lastname, $password));
+
+                        if (!$insertResult) {
+                            die("Error in SQL query: " . pg_last_error());
+                        }
+
+                        echo "Erfolgreich registriert";
+                    }
+
+                    pg_close($conn);
+                } else {
+                    echo "Form nicht eingereicht!";
+                }
+            ?>
         </div>
     </div>
 
