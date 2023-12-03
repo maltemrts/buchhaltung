@@ -35,16 +35,15 @@
     <div class="popup-windows-container">
         <span onclick="closePopup()" style="cursor: pointer; float: right;">X</span>
         <div id="loginForm" style="display: none;">
-            <!-- Login-Formular hier -->
             <h2 style="font-size: 25px;">Einloggen</h2>
             <form method="post" action="">
                 Benutzername/E-mail: <br><input type="text" name="username_or_email" required><br>
                 Passwort: <br><input type="password" name="password" required><br>
-                <input type="submit" name="login" value="Login"> <div class="button-right"><button type="button" onclick="redirectToRegistration()">zur Registrierung</button></div>
+                <input type="submit" name="login" value="Login"> 
+                <div class="button-right"><button type="button" onclick="redirectToRegistration()">zur Registrierung</button></div>
             </form>
         </div>
         <div id="registerForm" style="display: none;">
-            <!-- Registrierungsformular hier -->
             <h2 style="font-size: 25px;">Registrierung</h2>
             <form method="post" action="">
                 Benutzername: <br><input type="text" name="username" required><br>

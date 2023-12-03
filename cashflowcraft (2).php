@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,10 +32,8 @@
                 Nam liber tempor cum soluta nobis eleifend ion congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
             </article>
     </main>
-    
     <div class="popup-windows-container">
         <span onclick="closePopup()" style="cursor: pointer; float: right;">X</span>
-    
         <div id="loginForm" style="display: none;">
             <h2>Einloggen</h2>
             <form method="post" action="">
@@ -70,9 +68,13 @@
     
                 // Perform the login logic
                 // Use parameterized queries to prevent SQL injection
-                $query = "SELECT * FROM users WHERE (username = $1) AND password = $2";
+                $query = "SELECT * FROM \"dt_UserData\" WHERE (\"User_Username\" = $1 OR \"User_Email\" = $1) AND \"User_Password\" = $2";
                 $result = pg_query_params($conn, $query, array($username_or_email, $password));
     
+                if ($result === false) {
+                    die("Query failed: " . pg_last_error());
+                }
+                
                 if ($row = pg_fetch_assoc($result)) {
                     // Authentication successful
                     echo "<p style='color: green;'>Login successful. Welcome, {$row['username']}!</p>";
@@ -84,12 +86,20 @@
             ?>
         </div>
         <div id="registerForm" style="display: none;">
-            <!-- Registrierungsformular hier -->
-            <h2>Registrierung</h2>
+            <h2 style="font-size: 25px;">Registrierung</h2>
+            <form method="post" action="">
+                Benutzername: <br><input type="text" name="username" required><br>
+                E-Mail: <br><input type="text" name="email" required><br>
+                Vorname: <br><input type="text" name="firstname" required><br>
+                Nachname: <br><input type="text" name="lastname" required><br>
+                Passwort: <br><input type="password" name="password" required><br>
+                <input type="submit" name="register" value="Registrieren">  
+                <div class="button-right">
+                    <button type="button" onclick="redirectToLogin()">zum Login</button>
+                </div>
+            </form>
         </div>
     </div>
-
-
 
     <footer>
         <p>Impressum</p>
