@@ -21,10 +21,9 @@
     ?>
 </head>
 <body>
-
     <header>
         <h1>CashFlowCraft</h1>
-        <div class="logo"><img height="100px" width="100px" src="/buchhaltung/favicon.v4.png" alt="Ihr Logo"></div>
+        <div><img height="100px" width="100px" src="/aktuell/buchhaltung/favicon_v4.png" alt="Ihr Logo"></div>
     </header>
     <main>
     <section class="button-container"> 
