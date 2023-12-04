@@ -87,10 +87,17 @@ main {
     margin: 5px;
     transition: all 0.3s ease;
 }
+
 .button-container button:hover {
-    width: 180px;
-    height: 50px;
-    font-size: 18px;
+   transform: scale(1.14);
+}
+
+.buttonCont{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: rgb(24, 162, 236);
+    border-radius: 20px;
 }
 .popup-windows-container {
     font-size: 15px;
