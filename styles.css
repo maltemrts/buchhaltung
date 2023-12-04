@@ -105,6 +105,10 @@ main {
     border: 1px solid #ccc;
     line-height: 1;
     z-index: 1000;
+    height: 350px;
+    width: 250px;
+    border-radius: 20px;
+    text-align: center;
 }
 #loginForm, #registerForm {
     display: flex;
