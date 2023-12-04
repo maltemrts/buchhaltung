@@ -30,8 +30,10 @@
     <section class="button-container"> 
             <h2>Willkommen bei CashFlowCraft: Deiner Plattform für einfache und effiziente Buchführung!</h2>
            
+            <div class="buttonCont">
             <div class="loginbutton"> <button onclick="openPopup('login')">Einloggen</button></div>
             <div class="registerbutton"><button onclick="openPopup('register')">Registrieren</button></div>
+            </div>
         
         </section> 
     </main>
