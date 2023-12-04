@@ -41,7 +41,16 @@ header{
 .LogOutButton:hover{
     transform: scale(1.1);
 }
-
+.logo{
+    padding: 5px;
+}
+.icon{
+    margin-left: 15px;
+    display: flex;
+}
+.icon img{
+    margin-left: 15px;
+}
 header ul{
     margin: auto 0;
     display: flex;
