@@ -45,12 +45,24 @@
 <body>
     
 <header class="logo">
+    <form method="post">
         <ul>
             <li class="icon"><h1>CashFlowCraft</h1>
                 <img src="logo.png" alt=“logo“ height="50" width="50">
             </li>
-            <li><button class="LogOutButton">Log Out</button></li>
+            <li><button class="LogOutButton" name="logout">Log Out</button></li>
+            <?php
+                if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["logout"])) {
+                    pg_close($conn);
+                    session_unset();
+                    session_destroy();
+                    header("Location: http://localhost/buchhaltung/Homepage.php");
+                    exit();
+                }
+            ?>
         </ul>
+    </form>
+        
 </header>
 
 <main>
@@ -138,6 +150,10 @@
     <!-- Display ledger entries -->
     <?php
         echo "<ul class='bookingList'>"; // Start of the list container
+
+        // Assuming $connection is your PostgreSQL database connection
+        $query = "SELECT * FROM \"dt_Ledger\" WHERE \"Ledger_UserId\" = $1 ORDER BY \"Ledger_Id\" DESC";
+        $result = pg_query_params($conn, $query, array($user_id));
 
         while ($row = pg_fetch_assoc($result)) {
             echo "<li class='bookingEntry'>";
