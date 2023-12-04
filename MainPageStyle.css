@@ -79,7 +79,7 @@ header ul{
 
 .bookingEntry{
     display: flex;
-    width: 25vw;
+    width: 500px;
     margin: 5px auto;
     border: 1px solid black;
     border-radius: 10px;
