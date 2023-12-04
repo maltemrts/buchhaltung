@@ -6,9 +6,9 @@
     <title>CashFlowCraft</title>
     <link rel="stylesheet" href="MainPageStyle.css"> <!-- Verlinke deine CSS-Datei hier -->
     <script src="scriptsMainPage.js"> </script>
-   <!-- <script src="scripts.js"></script>  Verlinke deine JavaScript-Datei hier -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- <script src="scripts.js"></script>  Verlinke deine JavaScript-Datei hier -->
+    <link rel="icon" href="logo.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
 
     <?php
         // Database connection parameters
@@ -44,9 +44,11 @@
 </head>
 <body>
     
-<header>
+<header class="logo">
         <ul>
-            <li><h1>CashFlowCraft</h1></li>
+            <li class="icon"><h1>CashFlowCraft</h1>
+                <img src="logo.png" alt=“logo“ height="50" width="50">
+            </li>
             <li><button class="LogOutButton">Log Out</button></li>
         </ul>
 </header>
