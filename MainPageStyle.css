@@ -112,14 +112,14 @@ header ul{
     height: 5vh;
     margin: auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin-bottom: 5vh;
 }
 
 .bookingButton button{
-    width: 150px;
-    height: 30px;
+    width: 200px;
+    height: 40px;
     border-radius: 20px;
     color: white;
     
