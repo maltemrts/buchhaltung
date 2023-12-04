@@ -25,7 +25,7 @@
 
         if (!isset($_SESSION['user_id'])) {
             // Redirect to the login page if the user is not logged in
-            header("Location: http://localhost/buchhaltung/MainPage.php");
+            header("Location: http://localhost/buchhaltung/Homepage.php");
             exit();
         }
 
