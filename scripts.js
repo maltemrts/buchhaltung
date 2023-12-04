@@ -9,8 +9,9 @@ function openPopup(formType) {
         document.getElementById('registerForm').style.display = 'block';
     }
 }
-
-
+function closePopup() {
+    document.querySelector('.popup-windows-container').style.display = 'none';
+}
 function redirectToRegistration() {
         // Hier wird zur Registrierungsseite weitergeleitet
         document.getElementById('loginForm').style.display = 'none';
